@@ -81,7 +81,7 @@ const SignIn: NextPage = () => {
             component="h2"
             sx={{ fontSize: 32, color: 'black', fontWeight: 'bold' }}
           >
-            Sign in
+            サインイン
           </Typography>
         </Box>
         <Stack component="form" onSubmit={handleSubmit(onSubmit)} spacing={4}>
@@ -121,7 +121,7 @@ const SignIn: NextPage = () => {
              loading={isLoading}
              sx={{ fontWeight: 'bold', color: 'white' }}
            >
-             送信する
+             送信
          </LoadingButton>
         </Stack>
       </Container>

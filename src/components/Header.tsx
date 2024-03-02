@@ -13,7 +13,7 @@ import {
   MenuItem,
   ListItemIcon,
   Typography,
- } from '@mui/material'
+} from '@mui/material'
 import axios, { AxiosResponse, AxiosError } from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -21,9 +21,9 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { useUserState } from '@/hooks/useGlobalState'
 
-  const Header = () => {
-   const [user] = useUserState()
-   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+const Header = () => {
+  const [user] = useUserState()
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
    const open = Boolean(anchorEl)
    const router = useRouter()
 
@@ -56,33 +56,35 @@ import { useUserState } from '@/hooks/useGlobalState'
       })
    }
 
-    return (
-      <AppBar
-        position="static"
-        sx={{
-          backgroundColor: 'white',
-          color: 'black',
-          boxShadow: 'none',
-          py: 1,
-        }}
-      >
-        <Container maxWidth="lg" sx={{ px: 2 }}>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
-          >
-            <Box>
-              <Link href="/">
-                <Image src="/logo.png" width={133} height={40} alt="logo" />
-              </Link>
-            </Box>
-            {user.isFetched && (
-              <>
-                {!user.isSignedIn && (
-                  <Box>
+  return (
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: 'white',
+        color: 'black',
+        boxShadow: 'none',
+        py: '12px',
+      }}
+    >
+      <Container maxWidth="lg" sx={{ px: 2 }}>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
+          <Box>
+            <Link href="/">
+              <Image src="/logologo.png" width={100} height={65} alt="logo" />
+            </Link>
+          </Box>
+
+          {user.isFetched && (
+            <>
+              {!user.isSignedIn && (
+                <Box>
+                  <Link href="/sign_in">
                     <Button
                       color="primary"
                       variant="contained"
@@ -93,30 +95,27 @@ import { useUserState } from '@/hooks/useGlobalState'
                         borderRadius: 2,
                         boxShadow: 'none',
                       }}
-                      onClick={() => {
-                        router.push('/sign_in')
-                      }}
                     >
-                      Sign in
+                      サインイン
                     </Button>
-                    <Button
-                      color="primary"
-                      variant="outlined"
-                      sx={{
-                        textTransform: 'none',
-                        fontSize: 16,
-                        lineHeight: '27px',
-                        borderRadius: 2,
-                        boxShadow: 'none',
-                        border: '1.5px solid #3EA8FF',
-                        ml: 2,
-                      }}
-                    >
-                      Sign Up
-                    </Button>
-                  </Box>
-                )}
-               {user.isSignedIn && (
+                  </Link>
+                  <Button
+                    color="primary"
+                    variant="outlined"
+                    sx={{
+                      textTransform: 'none',
+                      fontSize: 16,
+                      borderRadius: 2,
+                      boxShadow: 'none',
+                      border: '1.5px solid #3EA8FF',
+                      ml: 2,
+                    }}
+                  >
+                    サインアップ
+                  </Button>
+                </Box>
+              )}
+              {user.isSignedIn && (
                  <Box sx={{ display: 'flex' }}>
                    <IconButton onClick={handleClick} sx={{ p: 0 }}>
                      <Avatar>
@@ -137,7 +136,7 @@ import { useUserState } from '@/hooks/useGlobalState'
                        }}
                        onClick={addNewArticle}
                      >
-                       Add new
+                       新規投稿
                      </Button>
                    </Box>
                    <Menu
@@ -153,12 +152,12 @@ import { useUserState } from '@/hooks/useGlobalState'
                        </Typography>
                      </Box>
                      <Divider />
-                     <Link href="/current/articles">
+                      <Link href="/current/articles">
                         <MenuItem>
                           <ListItemIcon>
                             <ArticleIcon fontSize="small" />
                           </ListItemIcon>
-                          記事の管理
+                          My記事
                         </MenuItem>
                       </Link>
                      <Link href="/sign_out">
@@ -174,10 +173,10 @@ import { useUserState } from '@/hooks/useGlobalState'
                )}
              </>
            )}
-          </Box>
-        </Container>
-      </AppBar>
-    )
-  }
+        </Box>
+      </Container>
+    </AppBar>
+  )
+}
 
-  export default Header
+export default Header

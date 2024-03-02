@@ -50,18 +50,25 @@ const ArticleDetail: NextPage = () => {
     >
       <Box
         sx={{
-          display: { xs: 'flex', lg: 'none' }, alignItems: 'center', backgroundColor: 'white', borderTop: '0.5px solid #acbcc7', height: 56, pl: 4, color: '#6e7b85', }}>
+          display: { xs: 'flex', lg: 'none' },
+          alignItems: 'center',
+          backgroundColor: 'white',
+          borderTop: '0.5px solid #acbcc7',
+          height: 56,
+          pl: 4,
+          color: '#6e7b85',
+        }}
+      >
         <Box sx={{ pr: 1 }}>
           <PersonIcon />
         </Box>
         <Box sx={{ mr: 2 }}>
-          <Typography component="p">クリエイター:</Typography>
+          <Typography component="p">著者:</Typography>
         </Box>
         <Typography component="p" sx={{ fontWeight: 'bold', color: 'black' }}>
           {article.user.name}
         </Typography>
       </Box>
-
       <Container maxWidth="lg">
         <Box sx={{ pt: 6, pb: 3 }}>
           <Box sx={{ maxWidth: 840, m: 'auto', textAlign: 'center' }}>
@@ -87,7 +94,7 @@ const ArticleDetail: NextPage = () => {
               mt: '20px',
             }}
           >
-            公開日:{article.createdAt}
+            {article.createdAt}に公開
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', gap: '0 24px' }}>
@@ -132,7 +139,7 @@ const ArticleDetail: NextPage = () => {
                       <Box sx={{ pr: 1 }}>
                         <PersonIcon />
                       </Box>
-                      <ListItemText primary="クリエイター" />
+                      <ListItemText primary="著者" />
                     </Box>
                     <Box>
                       <ListItemText primary={article.user.name} />
@@ -172,12 +179,11 @@ const ArticleDetail: NextPage = () => {
                       <Box sx={{ pr: 1 }}>
                         <UpdateIcon />
                       </Box>
-                      <ListItemText primary="更新" />
+                      <ListItemText primary="本文更新" />
                     </Box>
                     <Box>
                       <ListItemText primary={article.updatedAt} />
                     </Box>
-
                   </Box>
                 </ListItem>
               </List>
@@ -185,7 +191,6 @@ const ArticleDetail: NextPage = () => {
           </Box>
         </Box>
       </Container>
-
     </Box>
   )
 }

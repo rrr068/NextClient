@@ -18,7 +18,7 @@ const SignOut: NextPage = () => {
       isFetched: true,
     })
     setSnackbar({
-      message: 'サインアウトに成功しました',
+      message: 'サインアウト成功',
       severity: 'success',
       pathname: '/',
     })

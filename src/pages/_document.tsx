@@ -1,4 +1,3 @@
-
 import createEmotionServer from '@emotion/server/create-instance'
 import { RenderPageResult } from 'next/dist/shared/lib/utils'
 import Document, {
@@ -9,7 +8,6 @@ import Document, {
   DocumentInitialProps,
 } from 'next/document'
 import * as React from 'react'
-
 import createEmotionCache from '@/styles/createEmotionCache'
 import theme from '@/styles/theme'
 

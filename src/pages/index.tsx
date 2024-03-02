@@ -1,14 +1,14 @@
 import { Box, Grid, Container, Pagination } from '@mui/material'
-import camelcasekeys from 'camelcase-keys'
+import camelcaseKeys from 'camelcase-keys'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
-import { fetcher } from '@/utils'
 import ArticleCard from '@/components/ArticleCard'
-import { styles } from '@/styles'
-import Loading from '@/components/Loading'
 import Error from '@/components/Error'
+import Loading from '@/components/Loading'
+import { styles } from '@/styles'
+import { fetcher } from '@/utils'
 
 type ArticleProps = {
   id: number
@@ -29,8 +29,8 @@ const Index: NextPage = () => {
   if (error) return <Error />
   if (!data) return <Loading />
 
-  const articles = camelcasekeys(data.articles)
-  const meta = camelcasekeys(data.meta)
+  const articles = camelcaseKeys(data.articles)
+  const meta = camelcaseKeys(data.meta)
 
    const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
      router.push('/?page=' + value)
