@@ -14,6 +14,7 @@
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.10",
+    "@mui/lab": "^5.0.0-alpha.166",
     "@mui/material": "^5.15.10",
     "@types/node": "20.11.19",
     "@types/react": "18.2.56",
@@ -22,11 +23,14 @@
     "camelcase-keys": "^9.1.3",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
+    "marked": "^12.0.0",
     "next": "14.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.50.1",
     "swr": "^2.2.5",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "zenn-content-css": "^0.1.153"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.11.0"
