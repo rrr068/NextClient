@@ -129,7 +129,7 @@ const CurrentArticlesEdit: NextPage = () => {
     })
       .then(() => {
         setSnackbar({
-          message: '記事を保存しました',
+          message: '記事の保存に完了',
           severity: 'success',
           pathname: '/current/articles/edit/[id]',
         })
@@ -137,7 +137,7 @@ const CurrentArticlesEdit: NextPage = () => {
       .catch((err: AxiosError<{ error: string }>) => {
         console.log(err.message)
         setSnackbar({
-          message: '記事の保存に失敗しました',
+          message: '記事の保存に失敗',
           severity: 'error',
           pathname: '/current/articles/edit/[id]',
         })
@@ -210,7 +210,7 @@ const CurrentArticlesEdit: NextPage = () => {
                 fontSize: { xs: 12, sm: 16 },
               }}
             >
-              更新する
+              更新
             </LoadingButton>
           </Box>
         </Toolbar>
@@ -231,7 +231,7 @@ const CurrentArticlesEdit: NextPage = () => {
                     type="text"
                     error={fieldState.invalid}
                     helperText={fieldState.error?.message}
-                    placeholder="Write in Title"
+                    placeholder="タイトルを入力してください"
                     fullWidth
                     sx={{ backgroundColor: 'white' }}
                   />
@@ -250,7 +250,7 @@ const CurrentArticlesEdit: NextPage = () => {
                     helperText={fieldState.error?.message}
                     multiline
                     fullWidth
-                    placeholder="Write in Markdown Text"
+                    placeholder="本文を入力してください"
                     rows={25}
                     sx={{ backgroundColor: 'white' }}
                   />

@@ -1,4 +1,5 @@
-import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+//import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import VisibilityIcon from '@mui/icons-material/Visibility'
 import EditIcon from '@mui/icons-material/Edit'
 import {
   Avatar,
@@ -122,7 +123,7 @@ const CurrentArticles: NextPage = () => {
                 <Box>
                 <Link href={'/current/articles/edit/' + article.id}>
                   <Avatar>
-                    <Tooltip title="編集する">
+                    <Tooltip title="編集">
                       <IconButton sx={{ backgroundColor: '#F1F5FA' }}>
                         <EditIcon sx={{ color: '#99AAB6' }} />
                       </IconButton>
@@ -133,11 +134,11 @@ const CurrentArticles: NextPage = () => {
                 <Box>
                   <Link href={'/current/articles/' + article.id}>
                     <Avatar>
-                      <Tooltip title="表示を確認">
-                        <IconButton sx={{ backgroundColor: '#F1F5FA' }}>
-                          <ChevronRightIcon sx={{ color: '#99AAB6' }} />
-                        </IconButton>
-                      </Tooltip>
+                    <Tooltip title="記事の確認">
+                      <IconButton sx={{ backgroundColor: '#F1F5FA' }}>
+                        <VisibilityIcon sx={{ color: '#99AAB6' }} />
+                      </IconButton>
+                    </Tooltip>
                     </Avatar>
                   </Link>
                 </Box>

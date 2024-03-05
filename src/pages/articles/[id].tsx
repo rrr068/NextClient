@@ -63,7 +63,7 @@ const ArticleDetail: NextPage = () => {
           <PersonIcon />
         </Box>
         <Box sx={{ mr: 2 }}>
-          <Typography component="p">著者:</Typography>
+          <Typography component="p">Developer:</Typography>
         </Box>
         <Typography component="p" sx={{ fontWeight: 'bold', color: 'black' }}>
           {article.user.name}
@@ -94,7 +94,7 @@ const ArticleDetail: NextPage = () => {
               mt: '20px',
             }}
           >
-            {article.createdAt}に公開
+            公開日:{article.createdAt}
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', gap: '0 24px' }}>
@@ -139,7 +139,7 @@ const ArticleDetail: NextPage = () => {
                       <Box sx={{ pr: 1 }}>
                         <PersonIcon />
                       </Box>
-                      <ListItemText primary="著者" />
+                      <ListItemText primary="Developer" />
                     </Box>
                     <Box>
                       <ListItemText primary={article.user.name} />

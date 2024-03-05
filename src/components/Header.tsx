@@ -99,20 +99,11 @@ const Header = () => {
                       サインイン
                     </Button>
                   </Link>
-                  <Button
-                    color="primary"
-                    variant="outlined"
-                    sx={{
-                      textTransform: 'none',
-                      fontSize: 16,
-                      borderRadius: 2,
-                      boxShadow: 'none',
-                      border: '1.5px solid #3EA8FF',
-                      ml: 2,
-                    }}
-                  >
-                    サインアップ
-                  </Button>
+                  <Link href="/sign_up">
+                    <Button color="primary" variant="outlined" sx={{ textTransform: 'none', fontSize: 16, lineHeight: '27px', borderRadius: 2, boxShadow: 'none', border: '1.5px solid #3EA8FF', ml: 2, }} >
+                      新規登録
+                    </Button>
+                  </Link>
                 </Box>
               )}
               {user.isSignedIn && (
